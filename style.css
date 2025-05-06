@@ -1,0 +1,278 @@
+:root {
+    --bg: #111;
+    --text: #eee;
+    --accent: #66ccff;
+}
+
+body.light {
+    --bg: #f5f5f5;
+    --text: #222;
+    --accent: #0077cc;
+}
+
+body {
+    margin-top: 70;
+    margin-left: 0%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg);
+    padding: 1em;
+    position: fixed;  /* Fixed position at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-links li a,
+.nav-links li button {
+    text-decoration: none;
+    color: var(--text);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+:root {
+    --bg: #111;
+    --text: #eee;
+    --accent: #66ccff;
+    --card: #222;
+}
+
+body.light {
+    --bg: #f5f5f5;
+    --text: #222;
+    --accent: #0077cc;
+    --card: #fff;
+}
+
+.project-card {
+    background: var(--card);
+    border-radius: 10px;
+    padding: 15px;
+    width: 280px;
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent);  /* You can adjust the accent color */
+    color: var(--bg);  /* Contrast color for text */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;  /* Rounded corners */
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card a:hover {
+    background-color: #005f7f;  /* Darker accent color on hover */
+}
+
+.contact-links a {
+    display: inline-block;
+    margin: 10px;
+    color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--bg);
+    border-top: 1px solid #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--bg);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-left: 1px solid #444;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px 0;
+}
+
+.skill-card {
+    background: var(--card);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.skill-card span {
+    display: block;
+    font-size: 0.9em;
+    color: var(--text);
+}
+
+.hero-video {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    height: 100%;
+    padding-left: 50px; /* Space from the left side */
+    text-align: left; /* Align text to the left */
+}
+
+.hero-text {
+    max-width: 50%;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #0099cc;
+}
+
+/* Scroll Down Icon */
+.scroll-down-icon {
+    position: absolute;
+    bottom: 20px; /* 20px from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem; /* Icon size */
+    color: white;
+    animation: bounce 1.5s infinite; /* Animation for smooth bounce effect */
+}
+
+.scroll-down-icon a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
