@@ -1,42 +1,43 @@
+/* Root Variables */
 :root {
     --bg: #111;
     --text: #eee;
     --accent: #66ccff;
+    --card: #222;
 }
 
 body.light {
     --bg: #f5f5f5;
     --text: #222;
     --accent: #0077cc;
+    --card: #fff;
 }
 
+/* General Body Styles */
 body {
-    margin-top: 70;
-    margin-left: 0%;
-    margin-left: 0%;
-    margin-bottom: 0%;
+    margin-top: 70px;
+    margin-left: 0;
+    margin-bottom: 0;
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg);
     color: var(--text);
     transition: background 0.3s, color 0.3s;
 }
 
+/* Navigation Styles */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--bg);
     padding: 1em;
-    position: fixed;  /* Fixed position at the top */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
-
-
 
 .logo {
     font-size: 1.5em;
@@ -65,37 +66,27 @@ nav {
     cursor: pointer;
 }
 
+/* Section Styles */
 section {
     padding: 60px 20px;
     text-align: center;
 }
 
+/* Project Grid Styles */
 .project-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
     gap: 20px;
 }
 
-:root {
-    --bg: #111;
-    --text: #eee;
-    --accent: #66ccff;
-    --card: #222;
-}
-
-body.light {
-    --bg: #f5f5f5;
-    --text: #222;
-    --accent: #0077cc;
-    --card: #fff;
-}
-
+/* Project Card Styles */
 .project-card {
     background: var(--card);
     border-radius: 10px;
     padding: 15px;
-    width: 280px;
+    /* width: 80%; */
     color: var(--text);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -108,26 +99,80 @@ body.light {
 .project-card a {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--accent);  /* You can adjust the accent color */
-    color: var(--bg);  /* Contrast color for text */
+    background-color: var(--accent);
+    color: var(--bg);
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px;  /* Rounded corners */
-    text-align: center;
+    border-radius: 5px;
     margin-top: 10px;
     transition: background-color 0.3s ease;
 }
 
 .project-card a:hover {
-    background-color: #005f7f;  /* Darker accent color on hover */
+    background-color: #005f7f;
 }
 
-.contact-links a {
-    display: inline-block;
-    margin: 10px;
-    color: var(--accent);
+/* Contact Section */
+#contact {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--bg);
+    color: var(--text);
 }
 
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: var(--text);
+    opacity: 0.8;
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--card);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.contact-card img {
+    width: 40px;
+    margin-bottom: 10px;
+    filter: brightness(0) invert(1);
+}
+
+body.light .contact-card img {
+    filter: none;
+}
+
+.contact-card span {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer Styles */
 footer {
     text-align: center;
     padding: 20px;
@@ -135,7 +180,7 @@ footer {
     border-top: 1px solid #333;
 }
 
-/* Responsive */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -157,6 +202,7 @@ footer {
     }
 }
 
+/* Skills Section */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -190,6 +236,7 @@ footer {
     color: var(--text);
 }
 
+/* Hero Section */
 .hero-video {
     position: relative;
     height: 100vh;
@@ -210,16 +257,21 @@ footer {
     position: relative;
     z-index: 1;
     display: flex;
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-start;
     align-items: center;
     height: 100%;
-    padding-left: 50px; /* Space from the left side */
-    text-align: left; /* Align text to the left */
+    padding-left: 50px;
+    text-align: left;
 }
 
 .hero-text {
     max-width: 50%;
     color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .hero-text h1 {
@@ -248,16 +300,34 @@ footer {
 .hero-btn:hover {
     background-color: #0099cc;
 }
+.hero-btn-outline {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid var(--accent);
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.hero-btn-outline:hover {
+    border: 2px solid #fff;
+    color: #fff;
+}
 
 /* Scroll Down Icon */
 .scroll-down-icon {
     position: absolute;
-    bottom: 20px; /* 20px from the bottom */
+    bottom: 200px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2rem; /* Icon size */
+    font-size: 2rem;
     color: white;
-    animation: bounce 1.5s infinite; /* Animation for smooth bounce effect */
+    animation: bounce 1.5s infinite;
 }
 
 .scroll-down-icon a {
@@ -266,13 +336,77 @@ footer {
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
         transform: translateY(0);
     }
+
     40% {
         transform: translateY(-10px);
     }
+
     60% {
         transform: translateY(-5px);
     }
+}
+
+/* Tab Functionality */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab-btn {
+    background: var(--card);
+    color: var(--text);
+    border: 2px solid var(--accent);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.tab-btn.active {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    /* Fade in when active */
+    transform: translateY(0);
+}
+
+.tab-content.fade-out {
+    opacity: 0;
+    /* Make the content fade out */
+    transform: translateY(10px);
+    /* Optional: Add a slight downward movement */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+}
+
+/* Make sure active content fades in */
+.tab-content.active {
+    opacity: 1;
+    /* Fade in */
+    transform: translateY(0);
+    /* Reset position */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease;
 }
