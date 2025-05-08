@@ -26,93 +26,71 @@
   <main>
     <!-- Hero Section -->
     <section class="hero hero-video">
-      <video autoplay muted loop playsinline>
-        <source src="showreel.mp4" type="video/mp4">
-        Oops!, From this Browser you can't See my showreel!!
-      </video>
       <div class="hero-content">
-        <div class="scroll-down-icon">
-          <a href="#projects">
-            <span>&#8595;</span>
-          </a>
-        </div>
         <div class="hero-text">
           <h1>Hi, I'm Selvaraj 👋</h1>
           <p>Unity Developer | 3D Generalist</p>
           <a href="#projects" class="hero-btn">Explore My Works</a>
           <a href="#projects" class="hero-btn-outline">About</a>
         </div>
+        <div class="hero-video-wrapper">
+          <video autoplay muted loop playsinline>
+            <source src="showreel.mp4" type="video/mp4">
+            Oops!, From this Browser you can't See my showreel!!
+          </video>
+        </div>
       </div>
     </section>
+
+
+
 
     <!-- Projects Section -->
     <section id="projects">
       <h2>Project Works</h2>
       <div class="tab-buttons">
         <button class="tab-btn active" data-tab="tab1">Tools</button>
-        <button class="tab-btn" data-tab="tab2">AR/VR</button>
-        <button class="tab-btn" data-tab="tab3">Games</button>
+        <button class="tab-btn" data-tab="tab2">Games</button>
+        <button class="tab-btn" data-tab="tab3">AR/VR</button>
       </div>
 
       <div class="tab-content active" id="tab1">
         <div class="project-grid">
-          <div class="project-card">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Tool Project 1</h3>
+          <div class="project-card" style="width: 45%;">
+            <div class="image-slider">
+              <button class="prev-btn">&#10094;</button>
+              <img src="projects/tools/waypoint/entering.png" class="slider-image active" alt="WaypointEditor_Enabling">
+              <img src="projects/tools/waypoint/Editing.png" class="slider-image" alt="WaypointEditor_Editing">
+              <img src="projects/tools/waypoint/ToolView.png" class="slider-image" alt="WaypointEditor_ToolView">
+              <img src="projects/tools/waypoint/Exiting.png" class="slider-image" alt="WaypointEditor_Exiting">
+              <button class="next-btn">&#10095;</button>
+            </div>
+            <h3>Waypoint Editor</h3>
             <p>A Minimalistic Visual Editor for setting up Waypoints of Enemy AI.</p>
-            <a href="https://yourwebglbuild.com" target="_blank">View Demo</a>
           </div>
-          <div class="project-card">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Tool Project 1</h3>
-            <p>A Minimalistic Visual Editor for setting up Waypoints of Enemy AI.</p>
-            <a href="https://yourwebglbuild.com" target="_blank">View Demo</a>
-          </div>
-          <div class="project-card">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Tool Project 1</h3>
-            <p>A Minimalistic Visual Editor for setting up Waypoints of Enemy AI.</p>
-            <a href="https://yourwebglbuild.com" target="_blank">View Demo</a>
-          </div>
+
         </div>
       </div>
-
+      
       <div class="tab-content" id="tab2">
         <div class="project-grid">
-          <div class="project-card"> <img src="project1.jpg" alt="Project 1">
-            <h3>AR Project 1</h3>
-            <p>A Minimalistic Visual Editor for setting up Waypoints of Enemy AI.</p>
-            <a href="https://yourwebglbuild.com" target="_blank">View Demo</a>
-          </div>
-          <div class="project-card"> <img src="project1.jpg" alt="Project 1">
-            <h3>AR Project 1</h3>
-            <p>A Minimalistic Visual Editor for setting up Waypoints of Enemy AI.</p>
-            <a href="https://yourwebglbuild.com" target="_blank">View Demo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-content" id="tab3">
-        <div class="project-grid">
-          <div class="project-card"> <img src="project1.jpg" alt="Project 1">
-            <h3>Game Project 1</h3>
-            <p>A Minimalistic Visual Editor for setting up Waypoints of Enemy AI.</p>
-            <a href="https://yourwebglbuild.com" target="_blank">View Demo</a>
-          </div>
-          <div class="project-card"> <img src="project1.jpg" alt="Project 1">
-            <h3>Game Project 1</h3>
-            <p>A Minimalistic Visual Editor for setting up Waypoints of Enemy AI.</p>
-            <a href="https://yourwebglbuild.com" target="_blank">View Demo</a>
-          </div>
-          <div class="project-card"> <img src="project1.jpg" alt="Project 1">
-            <h3>Game Project 1</h3>
-            <p>A Minimalistic Visual Editor for setting up Waypoints of Enemy AI.</p>
-            <a href="https://yourwebglbuild.com" target="_blank">View Demo</a>
+          <div class="project-card"  style="width: 45%;">
+            <div class="image-slider">
+              <button class="prev-btn">&#10094;</button>
+              <img src="projects/bbshots/playing.png" class="slider-image active" alt="Waypoint_Editor">
+              <button class="next-btn">&#10095;</button>
+            </div>
+            <h3>BB Shots 3D</h3>
+            <p>A Casual game Basket ball game. Where you try to shoot the ball into the hoop to gain the highest Score within the time limit that can be extended on perefect shoots.</p>
+            <a href="https://cj-hawk2000.itch.io/bb-shots-3d" target="_blank">Play Game!</a>
           </div>
         </div>
       </div>
     </section>
-
+    
+          <div class="tab-content" id="tab3">
+          </div>
+    
     <!-- Graphics Section -->
     <section id="graphics">
       <h2>Graphical Works</h2>
@@ -134,7 +112,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id=" skills">
           <h2>Skills & Expertise</h2>
 
           <h3>Game Engines</h3>
@@ -193,6 +171,7 @@
   </main>
 
   <footer>
+    <p style="font-weight: bolder;">Portfolio is Still Under Development!...</p>
     <p>&copy; 2025 Selvaraj Balakrishnan. All rights reserved.</p>
     <p>Made with ❤️ using HTML, CSS & hosted on GitHub Pages.</p>
   </footer>
