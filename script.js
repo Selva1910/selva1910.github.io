@@ -46,23 +46,41 @@ function initImageSliders() {
   document.querySelectorAll('.image-slider').forEach(slider => {
     const images = slider.querySelectorAll('.slider-image');
     let index = 0;
+    let autoSlideInterval;
 
     const showImage = (i) => {
       images.forEach(img => img.classList.remove('active'));
       images[i].classList.add('active');
     };
 
+    const nextImage = () => {
+      index = (index + 1) % images.length;
+      showImage(index);
+    };
+
+    const startAutoSlide = () => {
+      stopAutoSlide(); // clear previous interval
+      autoSlideInterval = setInterval(nextImage, 3000); // 3s interval
+    };
+
+    const stopAutoSlide = () => {
+      if (autoSlideInterval) clearInterval(autoSlideInterval);
+    };
+
+    // Manual controls
     slider.querySelector('.prev-btn')?.addEventListener('click', () => {
       index = (index - 1 + images.length) % images.length;
       showImage(index);
+      startAutoSlide(); // Restart autoplay
     });
 
     slider.querySelector('.next-btn')?.addEventListener('click', () => {
-      index = (index + 1) % images.length;
-      showImage(index);
+      nextImage();
+      startAutoSlide(); // Restart autoplay
     });
 
-    showImage(index); // Initial display
+    showImage(index);     // Show initial
+    startAutoSlide();     // Start auto-slide
   });
 }
 
@@ -95,4 +113,3 @@ tabButtons.forEach(button => {
     }, 300);
   });
 });
-

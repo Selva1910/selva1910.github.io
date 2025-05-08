@@ -131,19 +131,26 @@ section {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow: hidden;
     max-width: 100%;
-    height: auto;
+    height: 400px;
 }
 
 .slider-image {
-    display: none;
+    position: fixed;
     height: auto;
     object-fit: contain;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .slider-image.active {
-    display: block;
+    position: fixed;
+    opacity: 1;
+    height: 400px;
+    transition: opacity 3s ease;
+    visibility: visible;
 }
 
 .prev-btn,
@@ -306,7 +313,7 @@ footer {
     justify-content: center;
     padding: 60px 20px;
     background-color: var(--bg);
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 .hero-content {
@@ -464,3 +471,38 @@ footer {
     /* Reset position */
     transition: opacity 0.3s ease-in-out, transform 0.3s ease;
 }
+
+.fadeimg {
+    opacity: 0;
+    display: none;
+    transition: opacity 3s ease;
+}
+
+.fadeimg.active {
+    opacity: 1;
+    transition: display 3s step-end;
+    display: block;
+}
+
+.contact-profile {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00bfff;
+    margin-bottom: 10px;
+  }
+  
+  .profile-desc {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #ccc;
+    word-wrap: normal;
+  }
+  
